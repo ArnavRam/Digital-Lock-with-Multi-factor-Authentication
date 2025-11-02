@@ -58,6 +58,7 @@ Overall, this project showcases how low-cost hardware and open-source software c
 to build a highly effective smart locking system. It not only meets the requirements of a modern
 access control mechanism but also provides a scalable foundation for future enhancements, such as
 fingerprint sensors, mobile app control, and cloud-based data logging.
+---
 ## Objective
 The primary objective of this project is to design and develop a multi-factor authentication digital
 lock system that enhances the security and reliability of access control using the ESP32
@@ -88,6 +89,7 @@ design, emphasizing modular coding, real-time operation, and cloud communication
 8. To develop a scalable and low-cost security prototype that can be adapted for
 various environments, including residential, institutional, and industrial access
 control systems.
+---
 ## Circuit Design
 The circuit design of the ESP32-based Digital Lock System integrates multiple hardware modules to
 achieve a secure, multi-factor authentication process. The ESP32 serves as the main processing unit
@@ -104,6 +106,7 @@ offering fast and stable data transfer. The keypad is interfaced through general
 configured for row-column scanning. The red and green LEDs are connected through current-limiting
 resistors to visually indicate system states such as “locked”, “unlocked”, and “authentication failed.
 <img width="786" height="871" alt="image" src="https://github.com/user-attachments/assets/f11e92a3-a5a1-4c7b-a67a-532acffe7075" />
+---
 ## Pin Configuration
 ### RFID Module RC522
 | RC522 Pin | ESP32 Pin |
@@ -131,6 +134,7 @@ resistors to visually indicate system states such as “locked”, “unlocked�
 | :--- | :--- | :--- |
 | Red LED | GPIO 5 | Locked / Access Denied |
 | Green LED | GPIO 2 | Unlocked / Access Granted |
+---
 ## Flowchart
 ```mermaid
 graph TD
@@ -150,5 +154,6 @@ graph TD
     EnterOTP -- Correct OTP --> StateUnlocked["State: UNLOCKED (Green LED ON)"]
     StateUnlocked -- 5 sec timeout --> StateLocked
 ```
+---
 ## Conclusion
 The multi-factor authentication digital lock system was successfully designed, implemented, and tested. The project demonstrates a practical and effective application of integrating embedded hardware (ESP32, RFID, Keypad) with IoT capabilities (Telegram API) to create a secure, reliable, and user-friendly access control system. The combination of RFID, PIN, and OTP verification provides a robust layered security mechanism that is superior to single-factor locks.
